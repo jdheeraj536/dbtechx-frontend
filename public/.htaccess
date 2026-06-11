@@ -7,3 +7,6 @@
   RewriteCond %{REQUEST_FILENAME} !-l
   RewriteRule . /index.html [L]
 </IfModule>
+
+# Ye line 404 error ko React ke index.html par redirect karegi
+ErrorDocument 404 /index.html
