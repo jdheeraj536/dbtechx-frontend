@@ -2,11 +2,15 @@
   RewriteEngine On
   RewriteBase /
 
-  # 1. SEO files ko direct serve karein (404 par redirect na karein)
+  # 1. Agar sitemap.xml file exist karti hai, toh seedha wahi dikhaye
+  RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^sitemap\.xml$ - [L]
+
+  # 2. Agar robots.txt file exist karti hai, toh seedha wahi dikhaye
+  RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^robots\.txt$ - [L]
 
-  # 2. Baki sab React (index.html) par bhejein
+  # 3. Baaki sab React ke liye (Routing)
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
