@@ -8,7 +8,7 @@ jobs:
       - run: npm install
       - run: npm run build
       
-      # Ye command files ko dist folder mein copy kar degi
+      # Automation: Public ki files ko dist mein copy karna
       - name: Copy SEO files
         run: |
           cp public/sitemap.xml dist/
