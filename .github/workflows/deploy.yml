@@ -8,10 +8,12 @@ jobs:
       - run: npm install
       - run: npm run build
       
-      # Yahan se automation add hogi: public ki files ko dist mein copy karega
-      - name: Copy SEO files to dist
-        run: cp public/sitemap.xml dist/ && cp public/robots.txt dist/
-        
+      # Ye command files ko dist folder mein copy kar degi
+      - name: Copy SEO files
+        run: |
+          cp public/sitemap.xml dist/
+          cp public/robots.txt dist/
+
       - name: Deploy to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
