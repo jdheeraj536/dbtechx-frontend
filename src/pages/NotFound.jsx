@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async"; // SEO ke liye import
 import { FaHome, FaArrowLeft } from "react-icons/fa";
 
 function NotFound() {
@@ -22,6 +23,11 @@ function NotFound() {
   return (
     <section className="min-h-screen w-full bg-black flex flex-col items-center justify-center relative overflow-hidden px-4 select-none">
       
+      <Helmet>
+        <title>404 - Page Not Found | DBTECHX</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
+
       {/* Background Glowing Effects */}
       <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-red-600/10 rounded-full blur-[120px] pointer-events-none animate-pulse"></div>
       <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-red-500/10 rounded-full blur-[120px] pointer-events-none animate-pulse delay-700"></div>

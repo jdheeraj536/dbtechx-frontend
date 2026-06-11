@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
+import { Helmet } from "react-helmet-async";
 import {
   FaLaptopCode,
   FaBullhorn,
@@ -112,6 +113,12 @@ export default function Home() {
 
   return (
     <div className="bg-white text-gray-900 overflow-hidden antialiased">
+      <Helmet>
+        <title>dbtechx | Best Digital Marketing & Web Development Agency in Purnia, Bihar</title>
+        <meta name="description" content="dbtechx offers professional Website Development, Digital Marketing, SEO, and Branding services in Purnia, Bihar. Boost your business with our expert tech solutions." />
+        <meta name="keywords" content="Digital Marketing Agency Purnia, Web Development Bihar, SEO Services Purnia, Graphic Design, Social Media Marketing, dbtechx, Software Development Purnia, Business Branding" />
+        <link rel="canonical" href="https://dbtechx.com/" />
+      </Helmet>
 
       {/* HERO SECTION */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden text-white pt-20 md:pt-0">

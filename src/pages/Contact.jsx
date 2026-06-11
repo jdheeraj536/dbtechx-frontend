@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async"; // SEO ke liye import
 import {
   FaPhoneAlt,
   FaEnvelope,
@@ -38,6 +39,13 @@ function Contact() {
 
   return (
     <>
+      <Helmet>
+        <title>Contact DBTECHX | Get in Touch for Digital Solutions</title>
+        <meta name="description" content="Have a project idea? Contact DBTECHX in Purnia for web development, digital marketing, SEO, and custom software solutions. Let's build something amazing together." />
+        <meta name="keywords" content="Contact DBTECHX, Digital Marketing Agency Purnia, Web Development Services Bihar, Hire Web Developer, Digital Business Consultation" />
+        <link rel="canonical" href="https://dbtechx.com/contact" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-black via-red-600 to-black text-white py-32">
         <div className="max-w-7xl mx-auto px-6 text-center">
@@ -56,61 +64,60 @@ function Contact() {
       </section>
 
       {/* Contact Cards Grid */}
-      {/* Contact Cards Grid */}
-<section className="py-20 bg-white">
-  <div className="max-w-7xl mx-auto px-6">
-    <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
-      
-      {/* Phone Card - Clickable to Call */}
-      <a 
-        href="tel:+919504393419" 
-        className="bg-zinc-50 p-8 rounded-3xl text-center shadow-md hover:-translate-y-2 transition duration-300 border border-gray-100 block group"
-      >
-        <div className="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mx-auto text-2xl mb-4 group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">
-          <FaPhoneAlt />
-        </div>
-        <h3 className="font-bold text-xl text-zinc-900">Phone</h3>
-        <p className="mt-3 text-red-600 font-semibold group-hover:underline">+91 9504393419</p>
-      </a>
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+            
+            {/* Phone Card - Clickable to Call */}
+            <a 
+              href="tel:+919504393419" 
+              className="bg-zinc-50 p-8 rounded-3xl text-center shadow-md hover:-translate-y-2 transition duration-300 border border-gray-100 block group"
+            >
+              <div className="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mx-auto text-2xl mb-4 group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">
+                <FaPhoneAlt />
+              </div>
+              <h3 className="font-bold text-xl text-zinc-900">Phone</h3>
+              <p className="mt-3 text-red-600 font-semibold group-hover:underline">+91 9504393419</p>
+            </a>
 
-      {/* Email Card - Clickable to Mail */}
-      <a 
-        href="mailto:contact@dbtechx.com" 
-        className="bg-zinc-50 p-8 rounded-3xl text-center shadow-md hover:-translate-y-2 transition duration-300 border border-gray-100 block group"
-      >
-        <div className="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mx-auto text-2xl mb-4 group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">
-          <FaEnvelope />
-        </div>
-        <h3 className="font-bold text-xl text-zinc-900">Email</h3>
-        <p className="mt-3 text-red-600 break-all font-semibold group-hover:underline">contact@dbtechx.com</p>
-      </a>
+            {/* Email Card - Clickable to Mail */}
+            <a 
+              href="mailto:contact@dbtechx.com" 
+              className="bg-zinc-50 p-8 rounded-3xl text-center shadow-md hover:-translate-y-2 transition duration-300 border border-gray-100 block group"
+            >
+              <div className="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mx-auto text-2xl mb-4 group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">
+                <FaEnvelope />
+              </div>
+              <h3 className="font-bold text-xl text-zinc-900">Email</h3>
+              <p className="mt-3 text-red-600 break-all font-semibold group-hover:underline">contact@dbtechx.com</p>
+            </a>
 
-      {/* Address Card */}
-      <div className="bg-zinc-50 p-8 rounded-3xl text-center shadow-md hover:-translate-y-2 transition duration-300 border border-gray-100">
-        <div className="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mx-auto text-2xl mb-4">
-          <FaMapMarkerAlt />
-        </div>
-        <h3 className="font-bold text-xl text-zinc-900">Address</h3>
-        <p className="mt-3 text-gray-600 text-sm leading-relaxed font-medium">
-          Near Hope Hospital Chowk,<br />Purnea, Bihar
-        </p>
-      </div>
+            {/* Address Card */}
+            <div className="bg-zinc-50 p-8 rounded-3xl text-center shadow-md hover:-translate-y-2 transition duration-300 border border-gray-100">
+              <div className="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mx-auto text-2xl mb-4">
+                <FaMapMarkerAlt />
+              </div>
+              <h3 className="font-bold text-xl text-zinc-900">Address</h3>
+              <p className="mt-3 text-gray-600 text-sm leading-relaxed font-medium">
+                Near Hope Hospital Chowk,<br />Purnea, Bihar
+              </p>
+            </div>
 
-      {/* Business Hours Card */}
-      <div className="bg-zinc-50 p-8 rounded-3xl text-center shadow-md hover:-translate-y-2 transition duration-300 border border-gray-100">
-        <div className="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mx-auto text-2xl mb-4">
-          <FaClock />
-        </div>
-        <h3 className="font-bold text-xl text-zinc-900">Business Hours</h3>
-        <p className="mt-3 text-gray-600 text-sm">
-          Monday - Saturday<br />
-          <span className="font-semibold text-zinc-800">9:00 AM - 7:00 PM</span>
-        </p>
-      </div>
+            {/* Business Hours Card */}
+            <div className="bg-zinc-50 p-8 rounded-3xl text-center shadow-md hover:-translate-y-2 transition duration-300 border border-gray-100">
+              <div className="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mx-auto text-2xl mb-4">
+                <FaClock />
+              </div>
+              <h3 className="font-bold text-xl text-zinc-900">Business Hours</h3>
+              <p className="mt-3 text-gray-600 text-sm">
+                Monday - Saturday<br />
+                <span className="font-semibold text-zinc-800">9:00 AM - 7:00 PM</span>
+              </p>
+            </div>
 
-    </div>
-  </div>
-</section>
+          </div>
+        </div>
+      </section>
 
       {/* Form + Map Split Grid */}
       <section className="py-20 bg-gray-100">
@@ -126,7 +133,6 @@ function Contact() {
                 </p>
 
                 <form onSubmit={handleSubmit} className="mt-8 space-y-5">
-                  {/* FormSubmit Configuration Fields */}
                   <input type="hidden" name="_subject" value="New Website Contact Message - DBTECHX" />
                   <input type="hidden" name="_captcha" value="false" />
                   <input type="hidden" name="_template" value="table" />

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async"; // SEO ke liye import
 import { 
   FaLaptopCode, 
   FaMobileAlt, 
@@ -70,6 +71,13 @@ function Services() {
 
   return (
     <>
+      <Helmet>
+        <title>Our Services | Digital Marketing & Tech Solutions | DBTECHX</title>
+        <meta name="description" content="Explore our professional services: Web and App Development, Digital Marketing, SEO, AI Automation, and Political Campaign Management. Grow your business with DBTECHX." />
+        <meta name="keywords" content="Digital Services Purnia, Web Development, SEO Services, App Development, AI Automation, Political Campaign Management, DBTECHX Services" />
+        <link rel="canonical" href="https://dbtechx.com/services" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-red-600 via-black to-red-700 text-white py-36">
         <div className="max-w-7xl mx-auto px-6 text-center">

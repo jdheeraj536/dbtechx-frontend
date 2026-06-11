@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async"; // SEO ke liye import
 import { FaCheckCircle, FaTimes } from "react-icons/fa";
 
 function Careers() {
@@ -51,6 +52,13 @@ function Careers() {
 
   return (
     <>
+      <Helmet>
+        <title>Careers at DBTECHX | Join Our Growing Team in Purnia</title>
+        <meta name="description" content="Looking for a career in digital marketing or web development? Join the team at DBTECHX in Purnia, Bihar. Apply for open positions today." />
+        <meta name="keywords" content="Careers at DBTECHX, Jobs in Purnia, Digital Marketing Jobs Bihar, Hiring Web Developer, Join DBTECHX, Career Opportunities" />
+        <link rel="canonical" href="https://dbtechx.com/careers" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-red-600 to-black text-white pt-36 pb-24">
         <div className="max-w-7xl mx-auto px-6 text-center">

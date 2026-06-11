@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async"; // SEO ke liye import
 import dheerajImg from "../assets/team/dheeraj.jpeg";
 import amanImg from "../assets/team/aman.jpeg";
 import priyaImg from "../assets/team/priya.jpeg";
@@ -47,6 +48,13 @@ function Team() {
 
   return (
     <>
+      <Helmet>
+        <title>Meet Our Professional Team | DBTECHX Digital Experts</title>
+        <meta name="description" content="Meet the expert team behind DBTECHX. Our professionals are dedicated to delivering high-performance digital marketing, web development, and design solutions for your business growth." />
+        <meta name="keywords" content="DBTECHX Team, Digital Marketing Experts, Web Developers Purnia, UX Designers, Business Growth Team, Dheeraj Kumar DBTECHX" />
+        <link rel="canonical" href="https://dbtechx.com/team" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-black via-red-600 to-black text-white pt-36 pb-24">
         <div className="max-w-7xl mx-auto px-6 text-center">

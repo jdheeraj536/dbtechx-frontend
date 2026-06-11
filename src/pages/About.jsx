@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
+import { Helmet } from "react-helmet-async"; // SEO ke liye import
 import {
   FaRocket,
   FaBullseye,
@@ -49,6 +50,12 @@ function Counter({ target, label, suffix = "" }) {
 function About() {
   return (
     <div className="bg-white text-gray-900 overflow-hidden antialiased">
+      <Helmet>
+        <title>About Us | DBTECHX - Expert Digital Solutions in Purnia</title>
+        <meta name="description" content="Learn more about DBTECHX, a leading technology and digital marketing agency based in Purnia, Bihar. Discover our mission, vision, and how we help businesses grow." />
+        <meta name="keywords" content="About DBTECHX, Digital Marketing Agency Purnia, Web Development Bihar, Company Story, Digital Transformation, Dheeraj Kumar" />
+        <link rel="canonical" href="https://dbtechx.com/about" />
+      </Helmet>
       
       {/* HERO SECTION - PT-28 ADDED FOR MOBILE GAP */}
       <section className="relative overflow-hidden bg-gradient-to-br from-black via-red-950 to-black text-white pt-28 md:pt-32 pb-20 md:pb-32">
@@ -210,7 +217,7 @@ function About() {
       </section>
 
       {/* OUR PROCESS */}
-      <section className="py-16 md:py-28 bg-black text-white relative">
+      <section className="py-16 md:py-28 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           
           <h2 className="text-3xl md:text-5xl font-extrabold text-center tracking-tight">
