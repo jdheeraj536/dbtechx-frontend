@@ -1,12 +1,15 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # 1. SEO files ko direct serve karein (404 par redirect na karein)
+  RewriteRule ^sitemap\.xml$ - [L]
+  RewriteRule ^robots\.txt$ - [L]
+
+  # 2. Baki sab React (index.html) par bhejein
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-l
   RewriteRule . /index.html [L]
 </IfModule>
-
-# Ye line 404 error ko React ke index.html par redirect karegi
-ErrorDocument 404 /index.html
