@@ -1,0 +1,38 @@
+/* Tailwind v4 Setup */
+@import "tailwindcss";
+
+/* 1. Basic Reset - HTML aur Body dono ko cover karo */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff; 
+  color: #111111;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 2. Marquee Animation - Sahi hai */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex; /* Isse marquee items sahi align honge */
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+/* 3. Dashboard - Sahi hai */
+.dashboard-container {
+  background-color: #0f172a !important;
+  color: #f8fafc;
+  min-height: 100vh;
+}
