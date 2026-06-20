@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 1. Gzip Compression - Text files ko compress karne ke liye (Speed badhata hai)
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json
@@ -16,15 +17,30 @@
 </IfModule>
 
 # 3. React Routing Rules
+=======
+>>>>>>> 6173cc62e178d83f6d280ebef39e18b089f2237d
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
+<<<<<<< HEAD
   # Sitemap aur Robots ko bypass kare
   RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^(sitemap\.xml|robots\.txt)$ - [L]
 
   # Baaki sab React index.html par bheje
+=======
+  # 1. Agar sitemap.xml file exist karti hai, toh seedha wahi dikhaye
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^sitemap\.xml$ - [L]
+
+  # 2. Agar robots.txt file exist karti hai, toh seedha wahi dikhaye
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^robots\.txt$ - [L]
+
+  # 3. Baaki sab React ke liye (Routing)
+  RewriteRule ^index\.html$ - [L]
+>>>>>>> 6173cc62e178d83f6d280ebef39e18b089f2237d
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-l
